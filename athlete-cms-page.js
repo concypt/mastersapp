@@ -203,7 +203,7 @@ $(function() {
   newParameters += (queryString.gclid ? "&gclid=" + queryString.gclid : "");
 
 
-  //console.log(newParameters);
+  console.log(newParameters);
   $('.button').each(function() {
   	let obj = $(this);
     let newHref;
