@@ -220,6 +220,18 @@ Webflow.push(function() {
     location.href = redirectURL; 
   });
 });
+
+// Bam landing page scroll header
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 60) {
+        $(".transparent-menu").addClass("nav-sticky");
+    }
+    else {
+      $(".transparent-menu").removeClass("nav-sticky");
+    }
+});
 // Account Creation using email Form submission
   //end of document ready
   });
