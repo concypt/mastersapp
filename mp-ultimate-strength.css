@@ -1,0 +1,35 @@
+.swiper-pagination-bullet-active{
+	background: #1f1f1f; 
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-button-disabled {
+  display: none !important;
+ }
+
+.swiper .swiper-pagination-bullet-active{
+	background: black;
+}
+
+
+.swiper .swiper-slide {
+    width: 77vw;
+  }
+
+.swiper .swiper-slide.wide {
+	width: 90vw;
+}
+
+@media screen and (max-width: 978px) {
+	.video-container{
+  	margin-left: calc((-978px + 100vw)/2)
+	}
+}
+
+@media screen and (min-width: 978px) {
+  .video-container{
+  	margin-top: calc((-56.25vw + 550px) / 2)
+	}
+}

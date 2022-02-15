@@ -1,0 +1,40 @@
+.swiper-pagination-bullet-active{
+	background: #1f1f1f; 
+}
+.w-slider-dot {
+  height: 5px;
+  width: 30px;
+  background: #8C8C8C;
+}
+.w-slider-dot.w-active {
+  background: #1F1F1F;
+}
+.w-slider-nav.w-round>div{
+	border-radius: 2px;
+}
+.w-slider-nav {
+	right: -50px;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* make the dropdown toggle text goes to next line */
+.ddown-toggle-text {
+	white-space: normal !important;
+  word-break: break-word;
+}
+.swiper-pagination{
+	display:none;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-disabled {
+  display: none !important;
+ }
+ .swiper-container .swiper-pagination{
+	display: block;
+}

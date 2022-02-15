@@ -108,7 +108,15 @@ $("#closeHeroVideoButton").on('click', function(){
 });
 
 $(function() {
-
+		//script for showing sections 
+    $("#visibility-data .sts-item .w-embed").each(function(){
+    	let sectionToShow = $(this).text();
+      sectionToShow = '#' + sectionToShow;
+      $(sectionToShow).removeClass('hidden');
+      console.log(sectionToShow);
+    });
+    //script for showing sections - end
+    
 		let currentAthleteSlug = convertToSlug('#athlete-name');
     //console.log(currentAthleteSlug)
     if(currentAthleteSlug == 'gus-kenworthy'){
@@ -202,21 +210,27 @@ $(function() {
   newParameters += (queryString.fbclid ? "&fbclid=" + queryString.fbclid : "");
   newParameters += (queryString.gclid ? "&gclid=" + queryString.gclid : "");
 
-
-  console.log(newParameters);
   $('.button').each(function() {
   	let obj = $(this);
     let newHref;
-    if(obj.attr('id') == 'navbar-button'){
-        	 //newHref = obj.attr('href')+'?'+newParameters;
-           newHref = obj.attr('href')+'&'+newParameters;
-    }else{
-       		 newHref = obj.attr('href')+'&'+newParameters;
+    if(newParameters){
+    	newHref = obj.attr('href')+'&'+newParameters;
+			obj.attr('href', newHref);
     }
-    obj.attr('href', newHref);
   });
   //End of Read and Add Querystring parameters to start now buttons 
 
   
   //end of document ready
   });
+
+
+// Account Creation using email Form submission
+Webflow.push(function() {
+  $('.account-form').submit(function(e) {
+  	e.preventDefault();
+    redirectURL = $('.button').attr('href')+'&email=' + encodeURIComponent($('.input-field').val());;
+    location.href = redirectURL; 
+  });
+});
+// Account Creation using email Form submission
