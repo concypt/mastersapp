@@ -184,7 +184,7 @@ $(function() {
 Webflow.push(function() {
   $('.account-form').submit(function(e) {
   	e.preventDefault();
-    redirectURL ='https://web.mastersapp.com/?email=' + encodeURIComponent($('.input-field').val());;
+    redirectURL = $('.button').attr('href')+'&email=' + encodeURIComponent($('.input-field').val());
     location.href = redirectURL; 
   });
 });
