@@ -1,5 +1,5 @@
 $(function() {
-    console.log( "test ready!" );
+    console.log( "ready!" );
   	//script for showing sections 
     $("#visibility-data .sts-item .w-embed").each(function(){
     	let sectionToShow = $(this).text();
